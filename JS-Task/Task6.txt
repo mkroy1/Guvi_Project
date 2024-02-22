@@ -1,0 +1,153 @@
+// Day 6  Task
+// 1. Class Movie
+
+class Movie {
+	constructor(title,studio,rating){
+  	this.title=title;
+    this.studio=studio;
+    this.rating=rating; 
+    	if(!rating) this.rating="PG"
+  }
+	getTitle(){
+  	return title;
+  }
+  getStudio(){
+		return studio;
+	}
+  getRating(){
+  	return rating;
+  }
+  setTitle(title){
+  	this.title=title;
+  }
+  setStudio(studio){
+  	this.studio=studio;
+  }
+  setRating(rating){
+  	this.rating=rating;
+  }
+}
+
+var bollywood1= new Movie("Tarzan","Bollywood","PG13")
+var bollywood2= new Movie("Tarzan","Bollywood")
+
+console.log(bollywood1)
+console.log(bollywood2)
+
+
+
+
+// 2.  Class Circle  -  area - circumferance
+class Circle{
+	constructor(radius,color){
+  	this.radius=radius;
+    this.color=color;
+  }
+  getRadaius(){
+ 		return radius;
+  }
+  getColor(){
+ 		return color;
+  }
+  setRadaius(radius){
+ 		this.radius=radius;
+  }
+  setColor(color){
+ 		this.color=color;
+  }
+  getArea(){
+  	return (Math.PI * this.radius * this.radius);
+  }
+  getCircumferance(){
+  	return (2 * Math.PI * this.radius)
+  }
+
+}
+
+var circleObj= new Circle(1.0,"red")
+console.log(circleObj)
+console.log(circleObj.getArea())
+console.log(circleObj.getCircumferance())
+
+
+
+// 3. Person class to hold all details
+
+class Person {
+  constructor(name,age,address){
+    this.name=name;
+    this.age=age;
+    this.address=address; 
+  }
+  getTitle(){
+    return name;
+  }
+  getStudio(){
+    return age;
+  }
+  getRating(){
+    return address;
+  }
+  setTitle(name){
+    this.name=name;
+  }
+  setStudio(age){
+    this.age=age;
+  }
+  setRating(rating){
+    this.address=address;
+  }
+}
+
+var pesonObj= new Person("Mukesh","30","Bangalore Karnataka - 560099")
+
+console.log(pesonObj)
+
+// =====================================================
+
+// 4. Write a Class to calculate Uber Price 
+
+class Uber {
+  constructor(initFee,initKM,pricePerKM,totalDist){
+    this.initFee=initFee;
+    this.initKM=initKM;
+    this.totalDist=totalDist;
+    this.pricePerKM=pricePerKM; 
+  }
+  getInitFee(){
+    return initFee;
+  }
+  getInitKM(){
+    return initKM;
+  }
+  getTotalDist(){
+  	return totalDist;
+  }
+  getPricePerKM(){
+  	return pricePerKM;
+  }
+	setInitFee(initFee){
+    this.initFee=initFee;
+  }
+  setInitKM(initKM){
+    this.initKM=initKM;
+  }
+  setTotalDist(totalDist){
+  	this.totalDist= totalDist;
+  }
+  setPricePerKM(pricePerKM){
+  	this.pricePerKM= pricePerKM;
+  }
+  
+	calPricePerKM(){
+		  //console.log(this.initFee , this.totalDist  , this.pricePerKM )
+
+			return (this.initFee+((this.totalDist - 2)*this.pricePerKM))
+  }
+}
+
+var uberObj= new Uber(130,2,20,10)
+
+//console.log(uberObj)
+//uberObj.calPricePerKM()
+console.log(uberObj.calPricePerKM())

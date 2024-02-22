@@ -1,0 +1,50 @@
+1. Write a blog on Difference between HTTP1.1 vs HTTP2
+HTTP stands for hypertext transfer protocol, and it is the basis for almost all web applications.  HTTP used in client-server communication, by using - user sends the request to the server and the server send response to the user. There are several stages of develoment , but we only focus on version http1.1 and http2
+
+HTTP1.1 - The first usable version of HTTP was created in 1997. Because it went through several stages of development, this first version of HTTP was called HTTP/1.1.
+HTTP2 - In 2015, a new version of HTTP called HTTP/2 was created. HTTP/2 solves several problems that the creators of HTTP/1.1 did not anticipate. In particular, HTTP/2 is much faster and more efficient than HTTP/1.1. One of the ways in which HTTP/2 is faster is in how it prioritizes content during the loading process.
+
+2. Write a blog about objects and its internal representation in Javascript
+
+A JavaScript object is a collection of named values having state and behavior (properties and method). It is most important data-type which can contain any combination of the primitive data-type(Number, String, Boolean, null, undefined and symbol) as well as reference data-types.
+An object, is a reference data type which reference or pointer points to the location in memory where the object is stored.
+
+A JavaScript object has properties associated with it. The properties of an object define the characteristics of the object. We access the properties of an object with a simple dot-notation:
+
+Syntax : objectName.propertyName
+
+Like all JavaScript variables, both the object name and property name are case sensitive. We can define a property by assigning it a value. For example, let’s create an object named myCar and give it properties named make, model, and year as follows:
+
+var myCar = new Object();
+myCar.make = 'Ford';
+myCar.model = 'Mustang';
+myCar.year = 1969;
+
+Properties of JavaScript objects can also be accessed or set using a bracket notation . Objects are sometimes called associative arrays, since each property is associated with a string value that can be used to access it. So, for example, we could access the properties of the myCar object as follows:
+
+myCar['make'] = 'Ford';
+myCar['model'] = 'Mustang';
+myCar['year'] = 1969;
+
+
+3. codekata practice  -  Continued
+
+4. Read about IP address, port, HTTP methods, MAC address
+
+IP address - An Internet Protocol (IP) address is a unique numerical identifier for every device or network that connects to the internet. Typically assigned by an internet service provider (ISP), an IP address is an online device address used for communicating across the internet.
+
+port - In computer networking, a port or port number is a number assigned to uniquely identify a connection endpoint and to direct data to a specific service. A port in networking is a software-defined number associated to a network protocol that receives or transmits communication for a specific service.
+
+
+HTTP methods :
+
+GET: GET request is used to read/retrieve data from a web server. GET returns an HTTP status code of 200 (OK) if the data is successfully retrieved from the server.
+
+POST: POST request is used to send data (file, form data, etc.) to the server. On successful creation, it returns an HTTP status code of 201.
+
+PUT: A PUT request is used to modify the data on the server. It replaces the entire content at a particular location with data that is passed in the body payload. If there are no resources that match the request, it will generate one.
+
+DELETE: A DELETE request is used to delete the data on the server at a specified location.
+
+
+MAC address - A MAC address (Media Access Control address) is a unique identifier assigned to a network interface controller (NIC) for use as a network address in communications within a network segment.

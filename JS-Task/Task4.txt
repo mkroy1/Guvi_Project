@@ -1,0 +1,343 @@
+// in anonymous function & IIFE
+// 1.a > Print odd numbers in an array
+// Anonymous
+ const funCall = function (arrayList) {
+  for(var i=0; i < arrayList.length;i++){
+    if (arrayList[i] % 2 != 0)
+    {
+      console.log(arrayList[i])
+    }
+  }
+}
+funCall([5,2,4,3,7]) 
+// IIFE
+ (
+function (arrayList) {
+  for(var i=0; i < arrayList.length;i++){
+    if (arrayList[i] % 2 != 0)
+    {
+      console.log(arrayList[i])
+    }
+  }
+}
+) ([5,2,4,3,7]); 
+
+//2 .a > 
+// Arrow Function
+
+const funCall = (arrayList) => {
+  for(var i=0; i < arrayList.length;i++){
+    if (arrayList[i] % 2 != 0)
+    {
+      console.log(arrayList[i])
+    }
+  }
+}
+funCall([5,2,4,3,7])
+//==================================================
+
+// 2. Convert all the strings to title caps in a string array
+   
+ // anonymous :  
+ const funcCall = function (str) {
+                    str = str.toLowerCase().split(' ');
+                    for (var i = 0; i < str.length; i++) {
+                      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+                    } 
+                    return str.join(' ');
+                  }
+                  
+  console.log(funcCall ("mukesh kumar roy")) 
+  
+  
+  //IIFE : 
+   const iife= (function (str) {
+                    str = str.toLowerCase().split(' ');
+                    for (var i = 0; i < str.length; i++) {
+                      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+                    } 
+               
+                    return str.join(' ');
+                  })("mukesh kumar roy");
+   console.log(iife)                 
+                   
+                   
+
+//2 .b > 
+// Arrow Function
+const funcCall =  (str) => {
+                    str = str.toLowerCase().split(' ');
+                    for (var i = 0; i < str.length; i++) {
+                      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+                    } 
+                    return str.join(' ');
+                  }
+                  
+  console.log(funcCall ("mukesh kumar roy"))
+//==================================================
+ // 3. Sum of all numbers in an array 
+//anonymous  :  
+               const sumFunc= function(array){
+                  var sum = 0;
+                  for(var i = 0 ; i< array.length ; i++){
+                     sum = sum + array[i];
+                   }
+                   return sum;
+                }
+                console.log(sumFunc([2,3,4,5,6,7]))
+//IIFE : 
+          const sumFunc1= (function(array){
+                      var sum = 0;
+                           for(var i = 0 ; i< array.length ; i++){
+                              sum = sum + array[i];
+                            }
+                            return sum;
+                 }) ([1,2,3,4])
+          console.log(sumFunc1) 
+
+
+
+//2 .c > 
+// Arrow Function
+
+							const sumFunc= (array) => {
+                  var sum = 0;
+                  for(var i = 0 ; i< array.length ; i++){
+                     sum = sum + array[i];
+                   }
+                   return sum;
+                }
+                console.log(sumFunc([2,3,4,5,6,7]))
+
+// ===================================
+
+  // 4. Return all prime number in an array 
+ //anonymous  :           
+ var a = [5, 9, 63, 29, 35, 6, 55, 23,3,4]
+ var prime = [];
+ 
+ const anonyFunc = function (item) {
+    //var identifier = item / 2;
+      for (var j = 2; j <= item / 2; j++) {
+       if ((item % j) == 0) { // modulous
+        return false;
+       } 
+     }
+     return true;
+ }
+ for (var index = 0; index < a.length; index++) {
+  if (anonyFunc(a[index])) {
+      prime.push(a[index])
+  }
+ }
+ console.log(prime);
+ 
+ //IIFE :
+ 
+ ( function(numArray){
+     numArray = numArray.filter((number) => {
+     for (var i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) return false;
+        }
+      return true;
+     });
+      console.log(numArray);
+      })([1,2,3,4])  
+      
+
+//2 .d > 
+// Arrow Function
+
+var a = [5, 9, 63, 29, 35, 6, 55, 23,3,4]
+ var prime = [];
+ 
+ const anonyFunc = function (item) {
+    //var identifier = item / 2;
+      for (var j = 2; j <= item / 2; j++) {
+       if ((item % j) == 0) { // modulous
+        return false;
+       } 
+     }
+     return true;
+ }
+ for (var index = 0; index < a.length; index++) {
+  if (anonyFunc(a[index])) {
+      prime.push(a[index])
+  }
+ }
+ console.log(prime);
+
+//=====================================
+
+ // 5  Return all the palindromes in an array
+  //anonymous  :  
+ let palindromeArray = function (arr)  {
+     //initialize to true
+     let isPalindrome = true;
+     
+     //loop through half length of the array
+     for(let i = 0; i < arr.length / 2; i++) {
+ 
+         //check if first half is equal to the second half
+         if(arr[i] !== arr[arr.length - i - 1]){
+           isPalindrome = false; 
+           break;
+         }
+     }
+     return isPalindrome;
+ }
+ console.log(palindromeArray([1,2,2,1]));
+ console.log(palindromeArray([1,2,2,2]));
+ 
+//IIFE : 
+
+        let    palindromeArray1=   (  function (arr)
+        {
+            // Traversing each element of the array
+            // and check if it is palindrome or not
+            let isPalindrome=true
+            for (let i = 0; i < arr.length /2 ; i++)
+            {
+                if(arr[i] !== arr[arr.length - i - 1]){
+                   isPalindrome = false; 
+                   break;
+                 }
+            }
+          
+            return isPalindrome;
+        })([1,2,1])
+        
+        console.log(palindromeArray1) 
+        
+   
+   //2 .d > 
+// Arrow Function
+
+ let palindromeArray =  (arr) => {
+     //initialize to true
+     let isPalindrome = true;
+     
+     //loop through half length of the array
+     for(let i = 0; i < arr.length / 2; i++) {
+ 
+         //check if first half is equal to the second half
+         if(arr[i] !== arr[arr.length - i - 1]){
+           isPalindrome = false; 
+           break;
+         }
+     }
+     return isPalindrome;
+ }
+ console.log(palindromeArray([1,2,2,1]));
+ console.log(palindromeArray([1,2,2,2]));
+
+//===============================
+        
+        
+         
+         // 6.    Return median of two sorted arrays of same size    
+         //Anonymous Function :
+         const median = function (a, b)  {
+            //Sort the array
+            let c = [...a, ...b].sort((a, b) => a - b);
+            
+            //Get the floor value
+            const half = Math.floor(c.length / 2 );
+        //const half = c.length / 2 | 0;  
+            //If odd then return middle element
+            if (c.length % 2) return c[half];
+            
+            //If even then return the average of two mid elements
+            return (c[half] + c[half - 1]) / 2;
+        }
+        const arr1 = [1, 12, 15, 26, 38];
+        const arr2 = [2, 13, 17, 30, 45, 47];
+        console.log(median(arr1, arr2));
+        
+        // IIFE Function :
+        const median1 = (
+        
+        function (a)  {
+            //Sort the array
+            let c = [...a];
+            //Get the floor value
+            const half = Math.floor(c.length / 2 );
+        //const half = c.length / 2 | 0;
+               
+            //If odd then return middle element
+            if (c.length % 2) return c[half];
+            //If even then return the average of two mid elements
+            return (c[half] + c[half - 1]) / 2;
+        }
+        
+        
+        )([1, 12, 15, 26, 38])
+        
+        console.log(median1) 
+        
+        
+         // 7 .Remove duplicates from an Array
+        // Anonymous :
+              let remDup=	 function(array){
+            let dup = [...new Set(array)];
+            console.log(dup);
+        }
+        console.log(remDup([2,2,3,4,4]))
+        //IIFE : 
+        let remDup1=(function(array){
+          let dup = [...new Set(array)];
+           console.log(dup);
+          })([1,1,2,3,4]) 
+          
+      
+      
+ // 7. Rotate an array by K times  
+//Anonymous Function :
+const rotateArray = function(nums, k) {
+
+  function reverse(arr, start, end) {
+    while (start < end) {
+      [arr[start], arr[end]] = [arr[end], arr[start]];
+      start++;
+      end--;
+
+    }
+  }
+
+  k %= nums.length;
+
+  reverse(nums, 0, (nums.length - 1));
+  reverse(nums, 0, (k - 1));
+  reverse(nums, k, (nums.length - 1));
+
+  return nums;
+}
+
+console.log(rotateArray([2,3,4,3,4],4))
+
+// IIFE :
+const rotateArray1= (function(nums,k){
+    
+  function reverse(arr,start,end){
+    while(start < end){
+        [arr[start],arr[end]]=[arr[end],arr[start]];
+        start++;
+        end--;
+
+    }
+  }
+k%=nums.length;
+reverse(nums,0,(nums.length-1))
+reverse(nums,0,(k-1))
+reverse(nums, k, (nums.length - 1));
+
+return (nums)
+
+}) ([2,3,4,3,4],4);
+
+console.log(rotateArray1) 
+
+
+
+
+

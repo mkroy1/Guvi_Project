@@ -1,0 +1,76 @@
+// Day 5  Task
+
+// 1.  
+// FOR 
+var scores = [3, 4 ,5 ,6 ,2 ,3];
+
+ for(var x = 0; x < scores.length; x++) {
+   console.log(scores[x])
+}
+
+//  FOR IN AND FOR OF WHEN USING ARRAY
+
+ for(var x in scores) {
+  console.log(x)
+}
+
+for(var x of scores) {
+  console.log(x)
+}
+
+//  FOR IN USING Object
+var data = {
+   "name": 'Mukesh',
+   "age": 26,
+   "address": {
+      "addressLine1": "Bangalore",
+      "addressLine2": "Karnataka"
+   }
+};
+ 
+for(var x in data) {
+  console.log(data[x])
+} 
+
+// FORWACH using ARRAY
+
+var scores = [3, 4 ,5 ,6 ,2 ,3];
+scores.forEach(function (element) {
+  console.log(element)
+})
+
+
+
+// 2. Create Resume in JASON Format
+
+{
+	"basics": {
+		"name": "Mukesh",
+		"email": "mukesh.roy@gmail.com",
+		"mobile Number": "9868657345",
+		"summary": "Summary of Mukesh",
+		"location":{
+			"address" : "Chikknagamangala, Rayasandar main Road",
+			"city": "Bangalore",
+			"state": "Karnataka",
+			"pincode": "560099",
+		}
+	},
+	"work exprience":{
+		"company name": "Capegemini india pvt ltd",
+		"designation": "senior consultant",
+		"work location" : "bangalore",
+		"joning date" : "16-06-2023",
+		"description" : "Having 10 years of experience in multiple domain including multiple technology, currently
+						 working Full Stack Developer for the banking organization.",
+		"skills": "JavaScript, html,java,mysql",
+	},
+	"education":{
+		"Highest Qualification": "Master Of Computer Application",
+		"institue": "RKDF Institute of technology",
+		"passing year": "2011",
+		"division": "First",
+		"Percentage": "70",
+	},
+	"language": "english, hindi"
+}
